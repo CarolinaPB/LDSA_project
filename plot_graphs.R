@@ -24,3 +24,12 @@ lines(amount$Data_size_.B., amount$Part_2, type="b", pch=0, col=491)
 legend(7e+9, 1000, legend=c("Question 1", "Question 2"),
        col=c("blue", "green"), lty=1:1, pch=c(1,0))
 
+hor_vert <- read.csv("/Users/Carolina/Documents/GitHub/LDSA_project/csv_performance/LDSA_scaling_times_4_Horiz_vs_Vert.csv", header = TRUE)
+plot(hor_vert$Workers_num, hor_vert$Part_1, xlab="# Workers",ylim=c(0,300), ylab="Time (s)", type="b", col=460, main = "Horizontal Vs Vertical scaling", xaxt='n')
+#axis(1, font = 2)
+axis(2, font = 2)
+axis(1, at = c(1,2,4,8), labels = c("1 [8]", "2 [4]", "4 [2]", "8 [1]"), font = 2)
+lines(hor_vert$Workers_num, hor_vert$Part_2, type="b", pch=0, col=491)
+legend(6, 300, legend=c("Question 1", "Question 2"),
+       col=c("blue", "green"), lty=1:1, pch=c(1,0))
+
